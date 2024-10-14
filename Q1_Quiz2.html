@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Movie</title>
+    
+    
+    <link rel="icon" href="https://i.pinimg.com/564x/a5/0e/a8/a50ea8c751709da4796c80106dfec758.jpg" type="image/png">
+
+    <style>
+        body {
+            font-family: Times New Roman, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: skyblue;
+            overflow: hidden; 
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px; 
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 700px; 
+            max-height: 90vh; 
+            overflow-y: auto; 
+        }
+        .movie-poster img {
+            max-width: 60%; 
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px; 
+        }
+        .movie-description {
+            margin-bottom: 20px; 
+            font-size: 14px; 
+            color: #333;
+        }
+        .character-header {
+            font-size: 18px; 
+            font-weight: bold; 
+            margin-bottom: 15px; 
+            color: #333;
+        }
+        .character-posters {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .character-posters div {
+            text-align: center;
+            width: 120px; 
+        }
+        .character-posters img {
+            width: 100px;  
+            height: auto;
+            border-radius: 8px;
+        }
+        .character-posters p {
+            margin-top: 5px;
+            font-size: 14px; 
+        }
+        .character-posters .name {
+            font-weight: bold; 
+        }
+        footer {
+            margin-top: 20px; 
+            padding: 10px;
+            background-color: skyblue;
+            color: #fff;
+            border-radius: 8px;
+        }
+        footer h2 {
+            margin: 0;
+            font-size: 16px; 
+        }
+        footer ul {
+            list-style-type: disc;
+            padding-left: 20px; 
+            font-size: 14px; 
+        }
+        footer li {
+            margin-bottom: 5px;
+        }
+        footer li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <section class="movie-poster">
+            <h1>𓆝 𓆟 𓆞</h1>
+            <img src="https://image.tmdb.org/t/p/original/yp8vEZflGynlEylxEesbYasc06i.jpg" alt="Movie Poster">
+        </section>
+        
+        
+        <section class="movie-description">
+            <p>
+                <i>"PONYO"</i> is a charming animated film by Studio Ghibli that tells the story of a young fish princess who longs to become human. With Ghibli's trademark breathtaking animation and heartwarming story, it's a film made for all ages.
+            </p>
+        </section>
+
+        
+        <section class="character-header">
+            𓂃𓊝 Important Characters:
+        </section>
+
+        
+        <section class="character-posters">
+            <div>
+                <img src="https://i.pinimg.com/736x/34/d3/62/34d36201c03e93a70f2342d5306ecdac.jpg" alt="Ponyo">
+                <p class="name">Ponyo</p>
+                <p>A curious and adventurous goldfish princess who dreams of becoming human. Her journey challenges the difference between the sea and land, bringing a magical transformation to her life.</p>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/474x/8f/21/45/8f2145c10784fb3b38dd95f8bd385323.jpg" alt="Sosuke">
+                <p class="name">Sōsuke</p>
+                <p>A brave young boy with a big heart. His friendship with Ponyo and determination to help her shows his unwavering loyalty and courage.</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW_88MA7tYom6S4W2fwKgQLuxNFdIvpPEITA&s" alt="Fujimoto">
+                <p class="name">Fujimoto</p>
+                <p>Ponyo’s father and a powerful sea wizard. He is protective and stern, driven by his concerns for the balance of nature and the well-being of his daughter.</p>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/236x/c5/95/bf/c595bf94670ba91ab40549e32c3fcd09.jpg" alt="Granmamare">
+                <p class="name">Granmamare</p>
+                <p>Ponyo's mother and an ancient and wise sea goddess. She holds immense power and knowledge which she uses to guide the ocean.</p>
+            </div>
+        </section>
+
+<form onsubmit="submitForm(event)">
+    <label for="movietext">
+        <span style="color: skyblue; font-style: italic;">꩜ What do you think of Ponyo's journey?</span>
+    </label>
+    <br>
+    <textarea id="movietext" rows="10" cols="70" placeholder="type your response here! 𓆝⋆｡˚" style="text-align: center;"></textarea>
+    <br><br>
+    <input type="submit" id="submit" name="submit" value="𓂃🖊" style="border-radius: 15px; padding: 5px 15px; background-color: white; border: 2px solid skyblue; transition: background-color 0.3s;">
+</form>
+
+<script>
+    const submitButton = document.getElementById('submit');
+    submitButton.addEventListener('mouseover', function() {
+        submitButton.style.backgroundColor = 'skyblue';
+        submitButton.style.color = 'white'; // so you can see the text on the bg color
+    });
+
+    submitButton.addEventListener('mouseout', function() {
+        submitButton.style.backgroundColor = 'white';
+        submitButton.style.color = 'black'; // reverts text color >.<
+    });
+
+    function submitForm(event) {
+        event.preventDefault(); // to prevent actual submission
+        const textarea = document.getElementById('movietext');
+        textarea.value = ''; // clears text area
+        alert("Your response has been submitted!");
+    }
+</script>
+
+        <footer>
+            <h2>𓇼 Movie Recommendations 𓇼</h2>
+            <ul>
+                <li><a href="https://www.google.com/search?q=Arriety+movie" target="_blank">Arriety</a></li>
+                <li><a href="https://www.google.com/search?q=Kiki's+Delivery+Service+movie" target="_blank">Kiki's Delivery Service</a></li>
+                <li><a href="https://www.google.com/search?q=Howl's+Moving+Castle+movie" target="_blank">Howl's Moving Castle</a></li>
+                <li><a href="https://www.google.com/search?q=Wind+Rises+movie" target="_blank">Wind Rises</a></li>
+                <li><a href="https://www.google.com/search?q=The+Boy+%26+the+Heron+movie" target="_blank">The Boy & the Heron</a></li>
+            </ul>
+        </footer>
+
+        <footer>
+           <span style="font-style: italic;"> Website made by Marley Manese ✩ </span>
+        </footer>
+
+    </div>
+</body>
+</html>
